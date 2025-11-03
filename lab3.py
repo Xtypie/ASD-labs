@@ -15,6 +15,7 @@ def findX(x):
 
     return set(sorted(res))
 
-x = int(input())
+x = 9
+
 print(findX(x))
 
