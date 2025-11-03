@@ -1,3 +1,5 @@
+# гребневая сортировка
+
 def sortc(mas):
     gap = len(mas)
     s = 1.247
