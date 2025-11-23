@@ -1,0 +1,21 @@
+# radix_sort
+def radix_sort(arr):
+    max_digits = max([len(str(x)) for x in arr])
+
+    base = 10
+
+    bins = [[] for _ in range(base)]
+
+    for i in range(0, max_digits):
+
+        for x in arr:
+            digit = (x // base ** i) % base
+            bins[digit].append(x)
+
+        arr = [x for j in bins for x in j]
+
+        bins = [[] for _ in range(base)]
+    return arr
+
+mas = [123, 246, 5, 12, 48, 192023, 988439]
+print(radix_sort(mas))
